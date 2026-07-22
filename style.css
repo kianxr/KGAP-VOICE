@@ -84,4 +84,46 @@ button:hover {
 
     background: #0088dd;
 
+}.container{
+
+width:90%;
+max-width:800px;
+
+color:white;
+text-align:center;
+
+}
+
+
+
+.rooms{
+
+display:flex;
+gap:20px;
+
+justify-content:center;
+
+}
+
+
+
+.room{
+
+background:
+rgba(255,255,255,0.12);
+
+padding:25px;
+
+border-radius:20px;
+
+width:250px;
+
+}
+
+
+
+.create{
+
+margin-top:30px;
+
 }
