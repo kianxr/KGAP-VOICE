@@ -27,8 +27,29 @@ io.on("connection",(socket)=>{
 
 console.log("User connected");
 
-
 socket.on("join-room",(room,username)=>{
+
+socket.join(room);
+
+
+if(!rooms[room])
+rooms[room]=[];
+
+
+rooms[room].push({
+id:socket.id,
+name:username,
+role:"member"
+});
+
+
+io.to(room).emit(
+"users",
+rooms[room]
+);
+
+
+});
 
 
 socket.to(room)
