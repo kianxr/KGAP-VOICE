@@ -31,7 +31,11 @@ console.log("User connected");
 socket.on("join-room",(room,username)=>{
 
 
-socket.join(room);
+socket.to(room)
+.emit(
+"user-connected",
+socket.id
+);
 
 
 if(!rooms[room])
