@@ -4,6 +4,7 @@ const { Server } = require("socket.io");
 const cors = require("cors");
 const {hasPermission}=require("./permissions");
 const {getRole}=require("./roles");
+const {setRole}=require("./roles");
 
 const app = express();
 
@@ -24,7 +25,16 @@ let rooms = {};
 
 
 io.on("connection",(socket)=>{
+socket.on("change-role",(data)=>{
 
+
+setRole(
+data.username,
+data.role
+);
+
+
+});
 
 console.log("User connected");
 
