@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+<title>KCRAFT Admin Panel</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>👑 KCRAFT Panel</h1>
+
+<input id="targetUser" placeholder="نام کاربر">
+
+<select id="role">
+<option value="admin">Admin</option>
+<option value="moderator">Moderator</option>
+<option value="member">Member</option>
+</select>
+
+<button onclick="changeRole()">
+تغییر نقش
+</button>
+
+<p id="result"></p>
+
+</div>
+
+
+<script src="js/admin.js"></script>
+
+</body>
+</html>
