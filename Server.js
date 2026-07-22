@@ -103,3 +103,24 @@ console.log(
 );
 
 });
+io.on("connection",(socket)=>{
+
+
+// کدهای قبلی
+
+
+socket.on("mute-user",(data)=>{
+
+if(
+hasPermission(data.role,"muteAll")
+){
+
+io.to(data.target)
+.emit("muted");
+
+}
+
+});
+
+
+});
