@@ -41,3 +41,14 @@ function leave(){
 window.location.href="home.html";
 
 }
+function muteUser(){
+
+socket.emit("mute-user",{
+
+target:"ID_PLAYER",
+
+role:"owner"
+
+});
+
+}
