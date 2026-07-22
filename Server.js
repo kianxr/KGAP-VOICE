@@ -39,7 +39,7 @@ rooms[room]=[];
 rooms[room].push({
 id:socket.id,
 name:username,
-role:"member"
+role:getRole(username)
 });
 
 
