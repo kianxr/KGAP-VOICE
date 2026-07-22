@@ -1,8 +1,4 @@
 const fs = require("fs");
-const {
-getRole,
-setRole
-}=require("./roles");
 
 let users =
 require("./users.json");
