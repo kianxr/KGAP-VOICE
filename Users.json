@@ -1,0 +1,13 @@
+{
+    "kian": {
+        "role": "owner"
+    },
+
+    "khobitaha": {
+        "role": "admin"
+    },
+
+    "amir_rk": {
+        "role": "moderator"
+    }
+}
