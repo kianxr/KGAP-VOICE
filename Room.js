@@ -52,3 +52,73 @@ role:"owner"
 });
 
 }
+socket.on("users",(users)=>{
+
+
+let box =
+document.getElementById("users");
+
+
+box.innerHTML="";
+
+
+users.forEach(user=>{
+
+
+box.innerHTML += `
+
+<div class="user">
+
+👤 ${user.name}
+
+<br>
+
+<span>
+${user.role}
+</span>
+
+
+<button onclick="mute('${user.id}')">
+🔇
+</button>
+
+
+<button onclick="kick('${user.id}')">
+👢
+</button>
+
+
+</div>
+
+
+`;
+
+});
+
+
+});
+function mute(id){
+
+socket.emit(
+"mute-user",
+{
+target:id,
+role:"owner"
+}
+);
+
+}
+
+
+
+function kick(id){
+
+socket.emit(
+"kick-user",
+{
+target:id,
+role:"owner"
+}
+);
+
+}
