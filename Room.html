@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KCRAFT Voice Room</title>
+
+<link rel="stylesheet" href="css/room.css">
+
+</head>
+
+
+<body>
+
+
+<div class="room-box">
+
+
+<h1>🎙️ KCRAFT Voice</h1>
+
+<h3 id="roomName"></h3>
+
+
+<div class="users">
+
+
+<div class="user">
+
+<div class="avatar">👑</div>
+
+<p>Owner</p>
+
+<span>🎤</span>
+
+</div>
+
+
+
+<div class="user">
+
+<div class="avatar">👤</div>
+
+<p>Player</p>
+
+<span>🔇</span>
+
+</div>
+
+
+</div>
+
+
+
+<div class="controls">
+
+
+<button onclick="mic()">
+🎤 میکروفون
+</button>
+
+
+<button onclick="camera()">
+📷 دوربین
+</button>
+
+
+<button onclick="screenShare()">
+🖥️ Share Screen
+</button>
+
+
+<button onclick="windowShare()">
+🪟 Share Window
+</button>
+
+
+<button onclick="leave()">
+🚪 خروج
+</button>
+
+
+</div>
+
+
+<div class="admin">
+
+
+<h3>🛡️ مدیریت</h3>
+
+<button>
+🔇 Mute All
+</button>
+
+
+<button>
+⛔ Stop Screen Share
+</button>
+
+
+<button>
+👢 Kick
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+<script src="js/room.js"></script>
+
+
+</body>
+
+</html>
