@@ -209,3 +209,11 @@ data.signal.candidate
 
 
 });
+socket.on("muted",()=>{
+
+let mic =
+localStream.getAudioTracks()[0];
+
+mic.enabled=false;
+
+});
