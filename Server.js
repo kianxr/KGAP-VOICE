@@ -4,8 +4,7 @@ const { Server } = require("socket.io");
 const cors = require("cors");
 const {hasPermission}=require("./permissions");
 const {getRole}=require("./roles");
-const {setRole}=require("./roles");
-
+const onlineUsers = {};
 const app = express();
 
 app.use(cors());
@@ -153,6 +152,19 @@ io.to(data.target)
 }
 
 });
+
+
+});
+socket.on("join-room",(room,username)=>{
+
+
+onlineUsers[socket.id] = {
+    username: username,
+    role: getRole(username)
+};
+
+
+socket.join(room);
 
 
 });
