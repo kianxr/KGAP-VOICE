@@ -168,3 +168,43 @@ socket.join(room);
 
 
 });
+socket.on("change-role",(data)=>{
+
+
+let user =
+onlineUsers[socket.id];
+
+
+
+if(!user)
+return;
+
+
+
+if(user.role !== "owner"){
+
+socket.emit(
+"error-message",
+"فقط Owner اجازه تغییر نقش دارد"
+);
+
+return;
+
+}
+
+
+
+setRole(
+data.username,
+data.role
+);
+
+
+
+socket.emit(
+"success",
+"نقش تغییر کرد"
+);
+
+
+});
